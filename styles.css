@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0 auto;
+  display: flex;
+}
+.sec1,
+.sec2 {
+  background-color: #dd082f;
+  padding: 20px;
+  width: 600px;
+  flex-wrap: wrap;
+}
+
+.circle {
+  font-size: 40px;
+  color: aqua;
+}
+.red {
+  color: red;
+}
+.yellow {
+  color: yellow;
+}
+.green {
+  color: green;
+}
+.sec1 div {
+  padding: 5px 35px;
+}
+.sec1 form {
+  padding: 5px 35px;
+}
+#button1,
+#button2 {
+  width: 70px;
+  padding: 10px 0;
+  border-radius: 20px;
+  background-color: green;
+  border: none;
+}
+#button2 {
+  background-color: yellow;
+}
+#pokemonSearch {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+#pokemonSearch::placeholder {
+  padding: 10px;
+}
+#imagenPokemon {
+  border: 1px solid black;
+}
+main{
+  flex-wrap: wrap;
+}
+#pokeInfo{
+  background-image: url("https://i.pinimg.com/originals/72/51/23/72512323b7eb9405b94935b7d4fd9aeb.gif");
+  background-size: 100% 100%;
+  min-height: 300px;
+  display: flex;
+}
+#infoPokeDiv{
+  overflow-y: scroll;
+  max-height: 400px;
+  padding: 20px;
+}
+#infoPokeDiv::-webkit-scrollbar{
+  width: 10px;
+}
+#infoPokeDiv::-webkit-scrollbar-thumb{
+  background-color: black;
+  border-radius: 5px;
+  height: 50px;
+}
+.sec2{
+ display: flex; 
+ justify-content: space-around;
+}
+#statsPokeDiv{
+  padding: 20px;
+}
+#error{
+  min-height: 300px;
+background-image: url(./img/Screenshot_1.jpg);
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+.pokemon {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50% );
+  border-radius: 50%;
+  border: 8px solid black;
+  animation: spin 1s linear infinite;
+}
+
+.pokemon::before {
+  content: '';
+  position: absolute;
+  height: 8px;
+  width: 50px;
+  background: black;
+  top: 50px;
+  transform: translatey(-50%);
+}
+
+.pokemon::after {
+  content: '';
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background: white;
+  top: 50px;
+  left: 50px;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white, inset 0 0 0 12px black;
+
+}
+
+/* Spin Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.displays{
+  display: none;
+}
+#areas{
+  overflow-y: scroll;
+  max-height: 400px;
+  padding: 20px;
+}
+#areas::-webkit-scrollbar{
+  width: 10px;
+}
+#areas::-webkit-scrollbar-thumb{
+  background-color: black;
+  border-radius: 5px;
+  height: 50px;
+}
+#areas,#infoPokeDiv,#statsPokeDiv{
+  
+}
