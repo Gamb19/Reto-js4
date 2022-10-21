@@ -18,7 +18,7 @@ let poken = async (namePoken)=>{
       let divPokeMovi=document.getElementById("infoPokeDiv")
       let divMoviPoken = document.createElement("ul");
       divPokeMovi.insertAdjacentElement("beforeend", divMoviPoken);
-      
+      divVerBusqueda.style=" background-image: url(https://i.pinimg.com/originals/72/51/23/72512323b7eb9405b94935b7d4fd9aeb.gif)";
 //Movimiento
       divMoviPoken.className="div-movimientos containers-scroll gap-2";
       divPokeMovi.innerHTML="";
@@ -58,14 +58,9 @@ let poken = async (namePoken)=>{
   }
   catch(error){
     let divVerBusqueda = document.getElementById("pokeInfo");
-    let area = document.getElementById("areas")
-    let move= document.getElementById("infoPokeDiv");
-    area.innerHTML="";
-    move.innerHTML="";
-    divVerBusqueda.innerHTML="";
-    divVerBusqueda.className="container-sm div-ver-pokemon d-md-flex justify-content-md-evenly error";
     alert("El pokemon no existe, o introduciste mal el nombre");
     console.log(error);
+    divVerBusqueda.style=" background-image: url(./img/Screenshot_1.jpg)";
   }
   finally{
     let spinner = document.getElementById("pokemonSpinner");
@@ -226,7 +221,7 @@ function habilidades(pokemon,divHabilidad){
   })
 }
 
-function validacion(namePokemon){
+function validation(namePokemon){
   if (/^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/.test(namePokemon)){
     let spinner = document.getElementById("pokemonSpinner");
     spinner.className="pokemon";
@@ -246,5 +241,5 @@ function buscarPokemon(e){
   e.preventDefault();
   let pokemon = document.getElementById("pokemonSearch").value;
   let namePokemon = pokemon.toLowerCase();
-  validacion(namePokemon);
+  validation(namePokemon);
 }
